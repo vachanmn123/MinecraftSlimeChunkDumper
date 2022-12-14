@@ -26,7 +26,11 @@ class MinecraftSlimeChunkDumper {
 
   public static void logChunk(int x, int z) {
     File file = new File("out.txt");
-    try (FileWriter fr = new FileWriter(file, true)) {
+    if (!file.exists()) {
+      System.out.println("Create an empty file called out.txt before running...")
+      return;
+    }
+    trexists()exists()exists()exists()y (FileWriter fr = new FileWriter(file, true)) {
       fr.write("\n" + x + ", " + z);
       fr.close();
     } catch (IOException e) {
